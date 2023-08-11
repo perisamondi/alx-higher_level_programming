@@ -7,18 +7,16 @@
 int check_cycle(listint_t *list)
 {
         listint_t *head = list;
-	listint_t *node  =  list;
+        listint_t *node  =  list;
 
-        if (!list)
-        return (1);
-
-	head = head->next;
-	node = node->next->next;
-
-	while(head && node->next)
-	{
-	     if (head  == node)
-	     return (0);
+        while(head && node && node->next)
+        {
+                head = head->next;      
+                node = node->next->next;    
+                if (head  == node)
+		{
+			return (0);
+		}
 	}
-	return (0);
+		return (1);
 }
