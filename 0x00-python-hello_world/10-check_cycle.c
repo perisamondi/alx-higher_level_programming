@@ -1,4 +1,5 @@
 #include  "lists.h"
+#include <stdio.h>
 /**
  * check_cycle - checks if a singly linked list  has a cycle in it 
  * @list ; linked list to be checked
@@ -18,5 +19,6 @@ int check_cycle(listint_t *list)
 			return (0);
 		}
 	}
-		return (1);
+		printf("No loop in linked list\n");
+return (0);
 }
